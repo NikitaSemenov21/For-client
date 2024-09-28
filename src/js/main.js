@@ -56,9 +56,11 @@ function burgerAnimation() {
         setTimeout(closeMenu, 200);
     });
 
-    navItems.forEach(navItem => {
-        navItem.addEventListener('click', closeMenu);
-    });
+    if (widthWin < 1140) {
+        navItems.forEach(navItem => {
+            navItem.addEventListener('click', closeMenu);
+        });
+    }
 
     if (banner.style.display != 'none') {
         if (widthWin < 980 && widthWin > 630) {
