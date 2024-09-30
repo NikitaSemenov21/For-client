@@ -1,0 +1,17 @@
+.nav-menu-link:nth-child(1) {
+  display: block;
+}
+
+.user-agreement-text p {
+  color: #444547;
+  font-size: 20px;
+  text-indent: 55px;
+  text-align: justify;
+  line-height: 133.2%;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+footer {
+  margin-top: 300px;
+}/*# sourceMappingURL=user-agreement.css.map */

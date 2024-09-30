@@ -1,0 +1,606 @@
+@import url(./reset.css);
+@import url(./animations-styles.css);
+// Fonts
+
+@font-face {
+    font-family: dinproBold;
+    src: url(../fonts/dinpro_bold.woff);
+}
+
+@font-face {
+    font-family: dinproRegular;
+    src: url(../fonts/dinpro.woff);
+}
+@font-face {
+    font-family: dinproMedium;
+    src: url(../fonts/dinpro_medium.woff);
+}
+
+$reg: dinproRegular;
+$med: dinproMedium;
+$bol: dinproBold;
+
+// Colors
+
+$mainTextC: #444547;
+$activeC: #7AA4BA;
+$bgC: #E6EEF1;
+
+// Styles
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: $med;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+} 
+
+header {
+    position: relative;
+    width: 100%;
+    background-color: #F0F5F7;
+    height: 85px;
+    z-index: 1000;
+}
+
+.logo-first {
+    display: none;
+    position: absolute;
+}
+
+strong {
+    color: $activeC;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background-color: #F0F5F7;
+}
+
+.banner-container {
+    display: flex;
+    gap: 20px;
+}
+
+.text-banner {
+    font-size: 20px;
+    color: #fff;
+}
+
+.close-icon-banner {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 300;
+}
+
+.nav-menu-link:nth-child(1) {
+    display: none;
+}
+
+.line-close-banner {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.top-line-close-banner {
+    rotate: 45deg;
+    transform: translate(1px, 1px);
+}
+
+.bottom-line-close-banner {
+    rotate: -45deg;
+}
+
+.container-for-burger-menu {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon {
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.line-close-icon {
+    display: block;
+    width: 19px;
+    height: 2px;
+    background-color: $mainTextC;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.top-line-close-icon {
+    rotate: 0deg;
+}
+
+.bottom-line-close-icon {
+    rotate: 0deg;
+}
+
+.logo {
+    max-width: 280px;
+    height: 75px;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu-link a {
+    color: $activeC;
+    font-size: 22px;
+    font-family: $reg;
+}
+
+.nav-menu-link:nth-child(5) {
+    display: none;
+}
+
+.container-social-networks {
+    display: flex;
+    gap: 30px;
+}
+
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    right: 20px;
+    border-radius: 32px;
+    width: 50px;
+    height: 50px;
+    background-color: #F0F5F7;
+}
+
+.container-burger-menu {
+    width: 20px;
+    height: 12px;
+}
+
+.line-burger-menu {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: $mainTextC;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.top-line-burger-menu {
+    top: 0px;
+}
+
+.center-line-burger-menu {
+    top: 5px;
+    left: 8px;
+    width: 12px;
+}
+
+.bottom-line-burger-menu {
+    top: 10px;
+}
+
+main {
+    background-image: url(../images/world\ 1\ \(1\).svg);
+    background-position: -70px 0px;
+    height: 600px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "text_main image_main";
+    height: 585px;
+}
+
+.image-container-main {
+    grid-area: image_main;
+    position: relative;
+    min-width: 440px;
+    top: 0px;
+}
+
+.text-container-main {
+    grid-area: text_main;
+    max-width: 560px;
+    margin-top: 85px;
+}
+
+.title-block {
+    font-family: $bol;
+    font-size: 46px;
+    color: $mainTextC;
+}
+
+.subtitle-main {
+    font-size: 34px;
+    color: $activeC;
+    margin-bottom: 20px;
+}
+
+.description-main {
+    color: #818181;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.slogan-main {
+    font-size: 20px;
+    color: $activeC;
+    margin-bottom: 14px;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.write-us-button {
+    font-size: 32px;
+    color: $activeC;
+    margin-left: 20px;
+}
+
+.container-social-networks-main {
+    display: flex;
+    gap: 15px;
+}
+
+.social-network-block {
+    width: 42px;
+    height: 42px;
+}
+
+.mini-description-main {
+    color: #8F8F8F;
+    font-size: 14px;
+    margin-top: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.advantages-container {
+    display: grid;
+    justify-items: center;
+}
+
+.advantage-title {
+    text-align: center;
+}
+
+.separator {
+    max-width: 238px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.slider-container-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-arrow {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 25px;
+    background-color: #EBF9FF;
+    border-radius: 5px;
+}
+
+.slider-arrow-left {
+    rotate: -180deg;
+}
+
+.swiper-button-lock  {
+    display: grid;
+}
+
+.line-separator {
+    display: block;
+    border-radius: 2px;
+    width: 90px;
+    height: 2px;
+    background-color: $activeC;
+}
+
+
+.advantage {
+    margin-bottom: 30px;
+}
+
+.advantage-container-items {
+    gap: 25px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.advantage-container {
+    display: grid !important;
+    justify-items: center;
+    grid-template-rows: max-content;
+    max-width: 280px;
+    min-height: 330px;
+    padding: 30px 22px;
+    background-color: $bgC;
+    border-radius: 5px;
+}
+
+.icon-advantage {
+    margin-bottom: 25px;
+}
+
+.description-advantage {
+    text-align: center;
+    color: $mainTextC;
+    line-height: 132%;
+}
+
+.button-advantage {
+    font-size: 26px;
+    color: $activeC;
+    margin-right: 84%;
+    margin-left: auto;
+}
+
+.next-flight {
+    display: grid;
+    align-items: center;
+    background-image: url(../images/next-flight-min.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    width: 100%;
+    height: 33.85vw;
+}
+
+.inline-border {
+    display: grid;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 8px solid #fff;
+    margin: 40px;
+    height: 88%;
+}
+
+.next-flight-container {
+    display: grid;
+    justify-items: center;
+}
+
+.next-flight-title {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container-social-networks-next-flight {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.write-us-button-next-flight {
+    color: #98c5de;
+}
+
+.description-next-flight {
+    font-size: 24px;
+    color: #fff;
+    max-width: 670px;
+    margin-bottom: 25px;
+}
+
+.about-us {
+    background-image: url(../images/background-image-about-us.png);
+    width: 100%;
+    height: 690px;
+}
+
+.about-us-container {
+   display: flex;
+   gap: 35px;
+}
+
+.text-container-about-us {
+    margin-top: 70px;
+    max-width: 715px;
+}
+
+.images-container-about-us {
+    margin-top: 100px;
+}
+
+.title-about-us {
+    margin-bottom: 30px;
+}
+
+.description-about-us {
+    font-size: 22px;
+    color: #8F8F8F;
+    text-align: justify;
+}
+
+.description-about-us strong {
+    color: $activeC;
+}
+
+.ocean-image-about-us, 
+.beach-image-about-us {
+    box-shadow: 0 2px 24px 2px rgba(0, 0, 0, 0.15);
+    border: 5px solid #fff;
+    height: auto;
+}
+
+.ocean-image-about-us {
+    max-width: 455px;
+}
+
+.beach-image-about-us {
+    max-width: 326px;
+    transform: translate(110px, -80px);
+}
+
+.welcome {
+    display: grid;
+    align-items: center;
+    background-image: url(../images/welcome-to-our-site.png);
+    background-position: 0 -130px;
+    width: 100%;
+    height: auto;
+    min-height: 455px;
+}
+
+.title-welcome {
+    font-size: 60px;
+    color: $activeC;
+    text-align: center;
+    max-width: 900px;
+}
+
+.partners {
+    margin: 90px 0px;
+}
+
+.partners-container {
+    display: grid;
+    justify-items: center;
+}
+
+.title-partners {
+    text-align: center;
+    max-width: 1032px;
+}
+
+.container-logo-partners {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 13px;
+}
+
+.footer {
+    background-image: url(../images/background-footer\ \(3\).png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-color: #a6a7a1;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nav-menu-footer {
+    max-width: 450px;
+}
+
+.text-owner-website {
+    color: #ffffff;
+    font-family: $med;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 120%;
+}
+
+.nav-menu-list {
+    display: flex; 
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.nav-menu-item-footer a { 
+    color: #fff;
+}
+
+.nav-menu-item a {
+    font-size: 20px;
+}
+
+.user-agreement-footer {
+    margin-top: 15px;
+}
+
+.user-agreement-footer a {
+    font-size: 24px;
+    color: #fff;
+}
+
+.container-social-networks-footer {
+    display: flex;
+    max-width: 230px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.social-network-footer {
+    width: 50px;
+    height: 50px;
+}
+
+.container-chart-footer {
+    max-width: 360px;
+    display: grid;
+    align-items: center;
+}
+
+.text-chart-footer {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 120%;
+    display: block;
+}
+
+.text-owner-website a {
+    color: #7AA4BA;
+}
