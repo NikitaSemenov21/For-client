@@ -1,0 +1,88 @@
+@keyframes openBurgerLineTop {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 5px;
+  }
+}
+@keyframes openBurgerLineCenter {
+  from {
+    left: 8px;
+    width: 12px;
+  }
+  to {
+    width: 20px;
+    left: 0px;
+  }
+}
+@keyframes openBurgerLineBottom {
+  from {
+    top: 10px;
+  }
+  to {
+    top: 5px;
+  }
+}
+@keyframes closeBurgerLineTop {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes closeBurgerLineCenter {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 5px;
+    left: 8px;
+    width: 12px;
+  }
+}
+@keyframes closeBurgerLineBottom {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 10px;
+  }
+}
+@keyframes openCloseIconTop {
+  from {
+    rotate: 0deg;
+    transform: translate(0px, 0px);
+  }
+  to {
+    rotate: 45deg;
+    transform: translate(1px, 1px);
+  }
+}
+@keyframes openCloseIconBottom {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: -45deg;
+  }
+}
+@keyframes cloCloseIconTop {
+  from {
+    rotate: 45deg;
+    transform: translate(1px, 1px);
+  }
+  to {
+    rotate: 0deg;
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes cloCloseIconBottom {
+  from {
+    rotate: -45deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}/*# sourceMappingURL=animations-styles.css.map */
